@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import path from "path"
 
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
@@ -11,6 +12,8 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: path.resolve(__dirname, 'dist'), // absolute path
+    // Build into src/dist because Render root is src
+    outDir: path.resolve(__dirname, "src/dist"),
+    emptyOutDir: true, // ensures old builds are removed
   },
 })
