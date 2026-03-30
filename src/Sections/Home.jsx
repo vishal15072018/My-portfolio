@@ -133,13 +133,15 @@ export default function Home() {
               </a>
 
               <a
-                href="/Resume.pdf"
-                Download
-                className="px-6 py-3 rounded-full font-medium text-lg text-black
-                  bg-white hover:bg-gray-200 shadow-lg hover:scale-105 transition-all"
-              >
-                My Resume
-              </a>
+  href="/Resume.pdf"       // exact case of the file in public folder
+  download                // lowercase
+  target="_blank"         // optional, opens in new tab
+  rel="noopener noreferrer"
+  className="px-6 py-3 rounded-full font-medium text-lg text-black
+             bg-white hover:bg-gray-200 shadow-lg hover:scale-105 transition-all"
+>
+  My Resume
+</a>
             </motion.div>
 
             {/* Social icons */}
